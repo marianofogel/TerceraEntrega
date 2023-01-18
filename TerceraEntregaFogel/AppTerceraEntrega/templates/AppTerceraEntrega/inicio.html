@@ -1,0 +1,20 @@
+{% extends 'AppTerceraEntrega/padre.html'%}
+{% load static %}
+{% block contenidoQueCambia %}
+
+<!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+<h1>¡Acá estara toda la informacion necesaria para los DEPORTISTAS!</h1>
+
+<p>Ante cualquier duda, puede contactarnos entre las 9:00 y 19:00, de Lunes a Viernes</p>
+<p>¡Contamos con muchos alumnos! Busca los nombres de tus futuros compañeros:
+
+    <form action="busqueda" method="GET">
+        <input type="text" name="deporte" id="deporte">
+        <input type="submit" value="Buscar"/>
+    </form>
+
+
+
+<h6>El deporte sana y renueva.</h6>
+
+{% endblock %}

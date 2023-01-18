@@ -1,0 +1,27 @@
+{% extends "AppTerceraEntrega/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+
+<h1>V O L E Y</h1>
+
+<p> ¡Inscribite para que nos pongamos en contacto con vos! </p>
+
+{% if miFormulario.errors %}
+       
+<p style="color: red;"> Están mal los datos, revisar por favor. </p>
+
+{% endif %}
+<form action="" method="POST">
+    {% csrf_token %}
+    
+    <table>
+        {{ miFormulario.as_table }}
+    </table>
+    <input type="submit" value="Enviar" />
+
+<p>Acá encontraras toda la información necesaria de VOLEY</p>
+
+{% endblock %}
